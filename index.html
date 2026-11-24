@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Prasad and Yamini are getting married on Friday, 4 December 2026 at 8:58 pm, Sri Matte Adinarayana Arya Vysya Kalyana Mandapam, Peddapuram.">
 <meta property="og:title" content="Prasad &amp; Yamini, 4 December 2026">
-<meta property="og:description" content="With the blessings of our elders, we invite you to our wedding in Peddapuram on Friday, 4 December 2026 at 8:58 pm.">
+<meta property="og:description" content="With the blessings of our elders, we invite you to our wedding in Peddapuram. Celebrations from 1 to 4 December 2026.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://prasad1311.github.io/P_Weds_Y/img/temple.jpg">
 <meta property="og:url" content="https://prasad1311.github.io/P_Weds_Y/">
@@ -244,6 +244,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <a class="mark" href="#top">P <span>&amp;</span> Y</a>
     <ul>
       <li><a href="#invitation">Invitation</a></li>
+      <li><a href="#celebrations">Celebrations</a></li>
       <li><a href="#muhurtham">Muhurtham</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#film">Film</a></li>
@@ -286,7 +287,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     </div>
     <p class="date">Friday, the fourth of December, 2026<br>at 8:58 in the evening</p>
     <p class="venue">Sri Matte Adinarayana Arya Vysya Kalyana Mandapam, Peddapuram</p>
-    <div class="btns"><a class="btn fill" id="cal-main" href="#" target="_blank" rel="noopener">Save the date</a><a class="btn" href="#venue">See the venue</a></div>
+    <div class="btns"><a class="btn fill" id="cal-main" href="#" target="_blank" rel="noopener">Save the date</a><a class="btn" href="#celebrations">See all five celebrations</a></div>
   </div>
 </section>
 
@@ -311,6 +312,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     </div>
   </div>
 </section>
+
+<!-- ======= celebrations ======= -->
+<div class="zari" aria-hidden="true"></div>
+<section class="cel center" id="celebrations">
+  <div class="wrap">
+    <svg class="lotus" viewBox="0 0 150 24" aria-hidden="true"><use href="#lotus"/></svg>
+    <h2 class="title">Five celebrations, four days</h2>
+    <p>Every event is at the kalyana mandapam in Peddapuram. The colours under each one are what to wear, so the photographs look beautiful together.</p>
+    <div class="cards" id="cards" style="text-align:left"></div>
+  </div>
+</section>
+<div class="zari" aria-hidden="true"></div>
 
 <!-- ======= muhurtham ======= -->
 <section id="muhurtham">
@@ -370,6 +383,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <p class="venue-name">Sri Matte Adinarayana Arya Vysya Kalyana Mandapam, Peddapuram</p>
       <p class="te" lang="te" style="color:var(--zari);margin-top:8px">శ్రీ మట్టే ఆదినారాయణ ఆర్య వైశ్య కళ్యాణ మండపం, పెద్దాపురం</p>
       <dl class="facts">
+        <div><dt>Celebrations</dt><dd>All five events, 1 to 4 December 2026</dd></div>
         <div><dt>Muhurtham</dt><dd>Friday, 4 December 2026, 8:58 pm</dd></div>
         <div><dt>By train</dt><dd>Samalkot Junction is the closest railway station</dd></div>
         <div><dt>By air</dt><dd>Rajahmundry Airport, about an hour by road. Message us if you need a pickup.</dd></div>
@@ -408,9 +422,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   function count(){ var ms = Math.max(0, WED - new Date()); $('cd-d').textContent = Math.floor(ms/864e5); $('cd-h').textContent = pad(Math.floor(ms/36e5) % 24); $('cd-m').textContent = pad(Math.floor(ms/6e4) % 60); }
   count(); setInterval(count, 20000);
 
-  var WEDDING = {t:'Pelli', desc:'The marriage of Prasad and Yamini. Muhurtham at 8:58 pm.', cal:'20261204T152800Z/20261204T182800Z'};
-  function calUrl(e){ return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent('Wedding of Prasad & Yamini') + '&dates=' + e.cal + '&ctz=Asia/Kolkata&location=' + encodeURIComponent(VENUE) + '&details=' + encodeURIComponent(e.desc + (SITE ? ' ' + SITE : '')); }
-  $('cal-main').href = calUrl(WEDDING);
+  var EV = [
+    {d:'01', wd:'Tuesday', t:'Sangeeth', te:'సంగీత్', time:'Evening', desc:'Music, dance and the first night of celebrations.', cal:'20261201/20261202', sw:['#7c2a5a','#1f5e6a','#c9952f'], wear:'Jewel tones', img:'lamplight', pos:'50% 60%'},
+    {d:'02', wd:'Wednesday', t:'Pellikoduku', te:'పెళ్ళికొడుకు', time:'7:30 am', desc:'The morning ceremony of blessings for the groom.', cal:'20261202T020000Z/20261202T040000Z', sw:['#f3ead6','#c99a3c','#8a1f1a'], wear:'Ivory and gold, pattu and pancha', img:'heritage', pos:'50% 75%'},
+    {d:'02', wd:'Wednesday', t:'Haldi', te:'పసుపు', time:'2:00 pm', desc:'Turmeric, flowers and a great deal of laughter.', cal:'20261202T083000Z/20261202T113000Z', sw:['#e9b824','#6f9a3b','#f4ecd8'], wear:'Turmeric yellow and leaf green', img:'swing', pos:'50% 50%'},
+    {d:'03', wd:'Thursday', t:'Mehendi', te:'మెహందీ', time:'Evening', desc:'Henna, songs and an evening with family.', cal:'20261203/20261204', sw:['#2f7a4a','#d9668f','#e9b824'], wear:'Mehendi green and rani pink', img:'forehead', pos:'40% 50%'},
+    {d:'04', wd:'Friday', t:'Pelli', te:'పెళ్ళి', time:'8:58 pm', desc:'The marriage ceremony, under the night sky.', note:'Please be seated a little before the muhurtham.', cal:'20261204T152800Z/20261204T182800Z', sw:['#4b1a4e','#c9962c','#f3ead6'], wear:'Pattu sarees, pancha or kurta', img:'temple', pos:'64% 60%', main:true}
+  ];
+  function calUrl(e){ return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(e.t + ', Prasad & Yamini') + '&dates=' + e.cal + '&ctz=Asia/Kolkata&location=' + encodeURIComponent(VENUE) + '&details=' + encodeURIComponent(e.desc + (SITE ? ' ' + SITE : '')); }
+  $('cal-main').href = calUrl(EV[4]);
+  $('cards').innerHTML = EV.map(function(e){
+    return '<article class="card' + (e.main ? ' main' : '') + '" style="--c1:' + e.sw[0] + ';--c2:' + e.sw[1] + ';--c3:' + e.sw[2] + '">' +
+      '<div class="ph"><img src="img/' + e.img + '.jpg" alt="" loading="lazy" style="object-position:' + e.pos + '"></div><div class="band" aria-hidden="true"></div>' +
+      '<div class="body"><p class="d"><b>' + e.d + '</b><span>' + e.wd.slice(0,3) + ', Dec</span></p>' +
+      '<h3>' + e.t + '</h3><p class="te" lang="te">' + e.te + '</p><p class="time">' + e.time + '</p><p class="desc">' + e.desc + '</p>' +
+      (e.note ? '<p class="note">' + e.note + '</p>' : '') +
+      '<p class="wear"><b>Wear</b>' + e.wear + '</p>' +
+      '<p class="links"><a href="' + esc(calUrl(e)) + '" target="_blank" rel="noopener">Calendar</a><a href="' + esc(MAP) + '" target="_blank" rel="noopener">Map</a></p></div></article>';
+  }).join('');
 
   var PH = [
     ['temple','The temple courtyard','Prasad and Yamini beside a stone Nandi in a carved temple courtyard'],
@@ -444,7 +473,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   lb.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
   lb.addEventListener('touchend', function(e){ if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; });
 
-  $('wa-share').href = 'https://wa.me/?text=' + encodeURIComponent('Prasad & Yamini are getting married on Friday, 4 December 2026 at 8:58 pm, at ' + VENUE + '.' + (SITE ? ' The invitation: ' + SITE : ''));
+  $('wa-share').href = 'https://wa.me/?text=' + encodeURIComponent('Prasad & Yamini are getting married on Friday, 4 December 2026 at 8:58 pm, at ' + VENUE + '. Celebrations run from 1 to 4 December.' + (SITE ? ' The invitation: ' + SITE : ''));
 })();
 </script>
 
